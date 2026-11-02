@@ -2,6 +2,23 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <!-- ★★★ 계좌 정보는 여기만 수정하세요 (은행명 / 계좌번호 / 예금주) ★★★
+       - 계좌번호는 하이픈(-) 포함해서 적어도 됩니다. 복사 시에는 숫자만 복사됩니다.
+       - 항목을 지우면 그 사람 카드가 사라지고, 추가하면 카드가 늘어납니다. -->
+  <script>
+    window.ACCOUNTS = {
+      "신랑측": [
+        { bank: "은행", number: "000-0000-0000", name: "김태명" },
+        { bank: "은행", number: "000-0000-0000", name: "김민영" },
+        { bank: "은행", number: "000-0000-0000", name: "김본" }
+      ],
+      "신부측": [
+        { bank: "은행", number: "000-0000-0000", name: "권용웅" },
+        { bank: "은행", number: "000-0000-0000", name: "손경희" },
+        { bank: "은행", number: "000-0000-0000", name: "권민성" }
+      ]
+    };
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <title>Von &amp; Minseong — Wedding Invitation</title>
@@ -383,34 +400,7 @@
       <p class="badge rv">WEDDING GIFT</p>
       <h2 class="sec-title rv">마음 전하실 곳</h2>
       <p class="account-msg rv">저희의 새로운 시작을 축복해 주시는<br>따뜻한 마음, 감사히 간직하겠습니다.</p>
-      <div class="account-list rv">
-        <p class="account-side">신랑측</p>
-        <button class="account-card copy-btn" type="button" data-copy="0000000000" aria-label="김태명 계좌번호 복사">
-          <div><span>김태명</span><span>은행 000-0000-0000</span></div>
-          <span class="account-copy">복사</span>
-        </button>
-        <button class="account-card copy-btn" type="button" data-copy="0000000000" aria-label="김민영 계좌번호 복사">
-          <div><span>김민영</span><span>은행 000-0000-0000</span></div>
-          <span class="account-copy">복사</span>
-        </button>
-        <button class="account-card copy-btn" type="button" data-copy="0000000000" aria-label="김본 계좌번호 복사">
-          <div><span>김본</span><span>은행 000-0000-0000</span></div>
-          <span class="account-copy">복사</span>
-        </button>
-        <p class="account-side">신부측</p>
-        <button class="account-card copy-btn" type="button" data-copy="0000000000" aria-label="권용웅 계좌번호 복사">
-          <div><span>권용웅</span><span>은행 000-0000-0000</span></div>
-          <span class="account-copy">복사</span>
-        </button>
-        <button class="account-card copy-btn" type="button" data-copy="0000000000" aria-label="손경희 계좌번호 복사">
-          <div><span>손경희</span><span>은행 000-0000-0000</span></div>
-          <span class="account-copy">복사</span>
-        </button>
-        <button class="account-card copy-btn" type="button" data-copy="0000000000" aria-label="권민성 계좌번호 복사">
-          <div><span>권민성</span><span>은행 000-0000-0000</span></div>
-          <span class="account-copy">복사</span>
-        </button>
-      </div>
+      <div class="account-list rv" id="account-list"></div>
     </section>
 
     <!-- CLOSING -->
@@ -461,6 +451,24 @@
     $('#nav-close').addEventListener('click', closeNav);
     $$('a', nav).forEach(a => a.addEventListener('click', closeNav));
     function closeNav() { nav.classList.remove('open'); nav.setAttribute('aria-hidden', 'true'); }
+
+    /* accounts (window.ACCOUNTS → cards) */
+    (function renderAccounts() {
+      const list = $('#account-list'); if (!list || !window.ACCOUNTS) return;
+      const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+      let html = '';
+      Object.keys(window.ACCOUNTS).forEach(side => {
+        const rows = window.ACCOUNTS[side] || []; if (!rows.length) return;
+        html += '<p class="account-side">' + esc(side) + '</p>';
+        rows.forEach(r => {
+          const digits = String(r.number || '').replace(/[^0-9]/g, '');
+          html += '<button class="account-card copy-btn" type="button" data-copy="' + esc(digits) + '" aria-label="' + esc(r.name) + ' 계좌번호 복사">'
+            + '<div><span>' + esc(r.name) + '</span><span>' + esc(r.bank) + ' ' + esc(r.number) + '</span></div>'
+            + '<span class="account-copy">복사</span></button>';
+        });
+      });
+      list.innerHTML = html;
+    })();
 
     /* copy */
     function copyText(t, msg) {
