@@ -474,7 +474,7 @@
     $('#share-btn').addEventListener('click', async () => {
       const url = window.location.href.replace(/[#?].*$/, '');
       if (navigator.share) {
-        try { await navigator.share({ title: '본 ♥ 민성 결혼식에 초대합니다', text: '2027.02.28 일요일 오전 11시 · 라시따시어터 1층 그랜드볼룸', url }); return; }
+        try { await navigator.share({ url }); return; }
         catch (err) { if (err && err.name === 'AbortError') return; }
       }
       copyText(url, '링크가 복사되었습니다.');
