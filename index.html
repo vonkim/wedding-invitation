@@ -87,17 +87,17 @@
     .nav-close { position: absolute; top: max(0.7rem, env(safe-area-inset-top)); right: 1.1rem; width: 2.4rem; height: 2.4rem; border: 0; background: transparent; font-size: 1.8rem; line-height: 1; cursor: pointer; color: var(--ink); }
 
     /* ───────── layout ───────── */
-    .main { max-width: 520px; margin: 0 auto; background: var(--bg); box-shadow: 0 0 40px rgba(0,0,0,0.04); }
-    section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .main { max-width: 600px; margin: 0 auto; background: var(--bg); box-shadow: 0 0 40px rgba(0,0,0,0.04); }
+    section { padding-left: 1.1rem; padding-right: 1.1rem; }
     .badge { margin-bottom: .45rem; font-family: "Outfit", var(--sans); font-size: .7rem; letter-spacing: .3em; color: var(--accent); text-align: center; }
     .sec-title { font-family: var(--serif-kr); font-weight: 400; font-size: 1.45rem; letter-spacing: .06em; color: var(--ink); text-align: center; margin-bottom: .9rem; }
     .divider { width: 32px; height: 1px; background: var(--accent); margin: 0 auto; opacity: .7; }
 
     /* ───────── hero ───────── */
-    .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 3rem; padding-bottom: 3.4rem; text-align: center; background: var(--bg); }
+    .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 3rem; padding-bottom: 3rem; text-align: center; background: var(--bg); }
     .hero-kicker { font-family: var(--script); font-size: clamp(2.3rem, 9vw, 3rem); line-height: 1; color: var(--ink); font-weight: 400; }
     .hero-kicker small { display: block; margin-top: .35rem; font-family: "Outfit", var(--sans); font-weight: 300; font-size: clamp(.78rem, 3vw, .9rem); letter-spacing: .46em; text-transform: uppercase; color: var(--muted); padding-left: .46em; }
-    .hero-photo { position: relative; width: 100%; max-width: 420px; margin: 1.6rem auto 1.5rem; overflow: hidden; border-radius: 2px; aspect-ratio: 2 / 3; background: var(--accent-soft); }
+    .hero-photo { position: relative; width: 100%; max-width: 520px; margin: 1.6rem auto 1.5rem; overflow: hidden; border-radius: 2px; aspect-ratio: 2 / 3; background: var(--accent-soft); }
     .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .hero-photo::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.35); pointer-events: none; }
     .hero-names { font-family: var(--serif-kr); font-weight: 300; font-size: clamp(1.45rem, 5.6vw, 1.75rem); letter-spacing: .32em; color: var(--ink); padding-left: .32em; }
@@ -112,11 +112,11 @@
     /* ───────── message ───────── */
     .message { padding-top: 3.2rem; padding-bottom: 2.6rem; text-align: center; background: var(--bg); }
     .star { display: block; color: var(--accent); font-size: .9rem; margin-bottom: 1.1rem; }
-    .message p { max-width: 22rem; margin: 0 auto; font-family: var(--serif-kr); font-weight: 300; font-size: clamp(.93rem, 3.5vw, 1.02rem); line-height: 2; color: var(--body); word-break: keep-all; }
+    .message p { max-width: 26rem; margin: 0 auto; font-family: var(--serif-kr); font-weight: 300; font-size: clamp(.93rem, 3.5vw, 1.02rem); line-height: 2; color: var(--body); word-break: keep-all; }
 
     /* ───────── celebrate (moving photo placeholder) ───────── */
     .celebrate { padding-top: 1.4rem; padding-bottom: 3rem; text-align: center; background: var(--bg); }
-    .celebrate-box { width: min(78%, 320px); aspect-ratio: 3 / 4; margin: 0 auto 1.4rem; border: 1px dashed var(--line); border-radius: 2px; display: grid; place-items: center; background: var(--paper); color: var(--muted); font-size: .8rem; letter-spacing: .08em; line-height: 1.9; }
+    .celebrate-box { width: min(88%, 400px); aspect-ratio: 3 / 4; margin: 0 auto 1.4rem; border: 1px dashed var(--line); border-radius: 2px; display: grid; place-items: center; background: var(--paper); color: var(--muted); font-size: .8rem; letter-spacing: .08em; line-height: 1.9; }
     .celebrate-box span { display: block; font-size: 1.3rem; color: var(--accent); opacity: .8; }
     .celebrate-title { font-family: var(--serif); font-weight: 400; color: var(--ink); line-height: 1; }
     .celebrate-title span { display: block; font-size: clamp(1.7rem, 7.5vw, 2.3rem); letter-spacing: .22em; padding-left: .22em; }
@@ -125,7 +125,7 @@
     /* ───────── people ───────── */
     .people { display: grid; gap: 2.4rem; padding-top: 1.4rem; padding-bottom: 3rem; background: var(--bg); }
     .person { text-align: center; }
-    .polaroid { width: min(84%, 320px); margin: 0 auto 1rem; padding: .7rem .7rem 2.4rem; background: #fff; border: 1px solid var(--line-soft); box-shadow: 0 8px 24px rgba(60,50,30,.08); transform: rotate(-2deg) translateY(16px); opacity: 0; transition: transform 1.1s cubic-bezier(.22,1,.36,1), opacity .9s ease; }
+    .polaroid { width: min(90%, 380px); margin: 0 auto 1rem; padding: .7rem .7rem 2.4rem; background: #fff; border: 1px solid var(--line-soft); box-shadow: 0 8px 24px rgba(60,50,30,.08); transform: rotate(-2deg) translateY(16px); opacity: 0; transition: transform 1.1s cubic-bezier(.22,1,.36,1), opacity .9s ease; }
     .person:nth-child(2) .polaroid { transform: rotate(2deg) translateY(16px); }
     .polaroid.is-in { opacity: 1; transform: rotate(-2deg) translateY(0); }
     .person:nth-child(2) .polaroid.is-in { transform: rotate(2deg) translateY(0); }
@@ -134,21 +134,14 @@
     .person-label { display: inline-block; padding: .62rem 1.25rem; border: 1px dotted var(--body); font-size: .82rem; letter-spacing: .08em; color: var(--ink); background: var(--bg); }
 
     /* ───────── gallery ───────── */
-    .gallery { padding-left: 0; padding-right: 0; padding-top: 1.6rem; padding-bottom: 2.6rem; background: var(--bg); }
+    .gallery { padding-left: 0; padding-right: 0; padding-top: 1.6rem; padding-bottom: 3rem; background: var(--bg); }
     .gallery .sec-title { font-family: var(--serif); font-size: 1.6rem; letter-spacing: .12em; margin-bottom: 1.2rem; }
-    .track { display: flex; gap: .45rem; overflow-x: auto; padding-inline: calc((100% - var(--slide)) / 2); scroll-snap-type: x mandatory; scroll-padding-inline: calc((100% - var(--slide)) / 2); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
-    .track::-webkit-scrollbar { display: none; }
-    .slide { flex: 0 0 var(--slide); aspect-ratio: 3 / 4; border: 0; padding: 0; overflow: hidden; background: var(--paper); scroll-snap-align: center; cursor: pointer; border-radius: 2px; position: relative; }
-    .slide img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-    .slide.placeholder { border: 1px dashed var(--line); display: grid; place-items: center; color: var(--muted); font-size: .78rem; letter-spacing: .08em; cursor: default; line-height: 1.9; }
-    .slide.placeholder b { display: block; font-weight: 400; font-family: var(--serif); font-size: 1.1rem; color: var(--accent); }
-    .pager { text-align: center; margin: .9rem 0 .7rem; font-family: var(--serif); font-size: .9rem; letter-spacing: .14em; color: var(--muted); }
-    .thumbs { display: flex; gap: .3rem; overflow-x: auto; padding: 0 1.5rem .4rem; scrollbar-width: none; }
-    .thumbs::-webkit-scrollbar { display: none; }
-    .thumb { flex: 0 0 44px; height: 58px; border: 1px solid transparent; padding: 0; background: var(--paper); overflow: hidden; opacity: .55; cursor: pointer; border-radius: 1px; }
-    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .thumb.is-active { opacity: 1; border-color: var(--accent); }
-    .thumb.ph { display: grid; place-items: center; color: var(--muted); font-size: .6rem; border: 1px dashed var(--line); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .35rem; padding: 0 .6rem; }
+    .cell { aspect-ratio: 3 / 4; border: 0; padding: 0; overflow: hidden; background: var(--paper); cursor: pointer; border-radius: 2px; position: relative; }
+    .cell img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; transition: transform .5s ease; }
+    .cell:active img { transform: scale(1.04); }
+    .cell.placeholder { border: 1px dashed var(--line); display: grid; place-items: center; color: var(--muted); font-size: .66rem; letter-spacing: .06em; cursor: default; line-height: 1.7; text-align: center; }
+    .cell.placeholder b { display: block; font-weight: 400; font-family: var(--serif); font-size: 1rem; color: var(--accent); }
 
     /* ───────── location ───────── */
     .location { padding-top: 3rem; padding-bottom: 2.8rem; background: var(--paper); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); text-align: center; }
@@ -160,7 +153,7 @@
     .venue-row a { color: inherit; text-decoration: none; }
     .pill { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; padding: .55rem 1.05rem; border: 1px solid rgba(43,42,40,.22); border-radius: 999px; background: #fff; color: var(--ink); font-size: .8rem; letter-spacing: .02em; cursor: pointer; text-decoration: none; }
     .pill svg { opacity: .75; }
-    .transport { max-width: 360px; margin: 2.2rem auto 0; text-align: left; font-size: .87rem; line-height: 1.8; color: var(--body); }
+    .transport { max-width: 440px; margin: 2.2rem auto 0; text-align: left; font-size: .87rem; line-height: 1.8; color: var(--body); }
     .transport-block + .transport-block { margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line-soft); }
     .transport h3 { font-size: .92rem; font-weight: 600; letter-spacing: .04em; color: var(--ink); margin-bottom: .35rem; }
     .transport h3 .en { font-family: "Outfit", var(--sans); font-weight: 400; font-size: .72rem; letter-spacing: .2em; color: var(--accent); margin-left: .45rem; }
@@ -177,12 +170,14 @@
     .route li.time::before { content: ""; }
     .route li.time svg { position: absolute; left: 0; top: .5rem; width: 14px; height: 14px; }
     .transport .note { margin-top: .4rem; font-size: .8rem; color: var(--muted); }
+    .route-btn { display: block; width: 100%; text-align: left; border: 0; background: none; padding: 0; cursor: pointer; font: inherit; line-height: inherit; color: inherit; }
+    .zoom-hint { display: inline-flex; align-items: center; gap: .3rem; margin-top: .45rem; font-size: .76rem; color: var(--accent); letter-spacing: .02em; }
     .transport .sub { color: var(--muted); font-size: .82rem; }
 
     /* ───────── account ───────── */
     .account { padding-top: 3rem; padding-bottom: 3rem; text-align: center; background: var(--bg); }
-    .account-msg { max-width: 22rem; margin: 0 auto 1.4rem; font-size: .86rem; line-height: 1.75; color: var(--muted); word-break: keep-all; }
-    .account-list { display: grid; gap: .38rem; max-width: 360px; margin: 0 auto; }
+    .account-msg { max-width: 26rem; margin: 0 auto 1.4rem; font-size: .86rem; line-height: 1.75; color: var(--muted); word-break: keep-all; }
+    .account-list { display: grid; gap: .38rem; max-width: 440px; margin: 0 auto; }
     .account-side { margin: .7rem 0 .15rem; font-size: .9rem; font-weight: 600; letter-spacing: .22em; color: var(--ink); padding-left: .22em; }
     .account-side:first-child { margin-top: 0; }
     .account-card { display: flex; align-items: center; justify-content: space-between; gap: .5rem; width: 100%; padding: .55rem .8rem; border: 1px solid var(--line-soft); background: var(--paper); text-align: left; cursor: pointer; border-radius: 2px; }
@@ -197,6 +192,9 @@
     .closing-frame { position: relative; display: block; width: min(56%, 250px); margin: 0 auto; }
     .closing-frame::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; box-shadow: inset 0 0 14px 4px #fff, inset 0 0 30px 2px #fff; }
     .closing img { display: block; width: 100%; height: auto; }
+    .closing-ph { aspect-ratio: 3 / 4; border: 1px dashed var(--line); background: var(--paper); display: grid; place-items: center; color: var(--muted); font-size: .74rem; letter-spacing: .08em; line-height: 1.9; text-align: center; }
+    .closing-ph::after { display: none; }
+    .closing-ph i { display: block; font-style: normal; color: var(--accent); font-size: 1.1rem; }
     .footer { padding: 1.2rem 1.4rem calc(4rem + env(safe-area-inset-bottom)); text-align: center; background: var(--bg); color: var(--ink); font-family: var(--serif); font-style: italic; font-size: 1.05rem; line-height: 1.7; }
     .footer .en-names { font-style: italic; font-size: 1.1rem; }
     .footer .date { letter-spacing: .14em; font-style: normal; font-size: .95rem; color: var(--body); }
@@ -208,7 +206,11 @@
     .modal { position: fixed; inset: 0; z-index: 400; background: rgba(20,18,16,.82); display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; pointer-events: none; transition: opacity .25s ease; }
     .modal.is-open { opacity: 1; pointer-events: auto; }
     .modal-close { position: absolute; top: max(.8rem, env(safe-area-inset-top)); right: 1rem; width: 2.5rem; height: 2.5rem; border: 0; border-radius: 50%; background: rgba(255,255,255,.14); color: #fff; font-size: 1.7rem; line-height: 1; cursor: pointer; }
-    .modal-img { max-width: min(100%, 520px); max-height: 86svh; width: auto; height: auto; object-fit: contain; border-radius: 2px; background: #fff; }
+    .modal-img { max-width: min(100%, 600px); max-height: 86svh; width: auto; height: auto; object-fit: contain; border-radius: 2px; background: #fff; }
+    .zoom-wrap { max-width: min(100%, 600px); max-height: 90svh; overflow: auto; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y pinch-zoom; border-radius: 2px; background: #fff; scrollbar-width: none; }
+    .zoom-wrap::-webkit-scrollbar { display: none; }
+    .zoom-wrap .modal-img { max-height: none; width: 100%; height: auto; display: block; cursor: zoom-in; }
+    .zoom-wrap.zoomed .modal-img { width: 200%; max-width: none; cursor: zoom-out; }
     .modal-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 2.6rem; height: 2.6rem; border: 0; border-radius: 50%; background: rgba(255,255,255,.14); color: #fff; font-size: 1.4rem; cursor: pointer; }
     .modal-nav.prev { left: .6rem; } .modal-nav.next { right: .6rem; }
     .modal-count { position: absolute; bottom: max(1.2rem, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.8); font-family: var(--serif); letter-spacing: .14em; font-size: .9rem; }
@@ -241,13 +243,10 @@
       <div class="hero-photo">
         <img src="assets/hero.jpg" alt="본과 민성의 웨딩 사진" width="1200" height="1800" decoding="async" fetchpriority="high">
       </div>
-      <p class="hero-names">본 <span class="amp" aria-hidden="true">&amp;</span><span class="visually-hidden">그리고</span> 민성</p>
+      <p class="hero-names">본 <span class="amp">&amp;</span> 민성</p>
       <p class="hero-date">2027.02.28</p>
       <p class="hero-when">일요일 · 오전 11시</p>
       <p class="hero-place">라시따시어터 1층 그랜드볼룸 단독홀</p>
-      <button class="scroll-hint" id="scroll-hint" type="button" aria-label="아래로 보기">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M6 6.5l6 6 6-6"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M6 12.5l6 6 6-6"/></svg>
-      </button>
     </section>
 
     <!-- MESSAGE -->
@@ -293,25 +292,23 @@
     <!-- GALLERY -->
     <section class="gallery" id="gallery" aria-label="웨딩 갤러리">
       <h2 class="sec-title rv">Wedding Photos</h2>
-      <div class="track" id="track" tabindex="0" aria-label="웨딩 갤러리">
-        <button class="slide" type="button" data-i="0" aria-label="웨딩 사진 1"><img src="assets/gallery-01.jpg" alt="웨딩 사진 1" decoding="async"></button>
-        <button class="slide" type="button" data-i="1" aria-label="웨딩 사진 2"><img src="assets/gallery-02.jpg" alt="웨딩 사진 2" loading="lazy" decoding="async"></button>
-        <button class="slide" type="button" data-i="2" aria-label="웨딩 사진 3"><img src="assets/gallery-03.jpg" alt="웨딩 사진 3" loading="lazy" decoding="async"></button>
-        <button class="slide" type="button" data-i="3" aria-label="웨딩 사진 4"><img src="assets/gallery-04.jpg" alt="웨딩 사진 4" loading="lazy" decoding="async"></button>
-        <button class="slide" type="button" data-i="4" aria-label="웨딩 사진 5"><img src="assets/gallery-05.jpg" alt="웨딩 사진 5" loading="lazy" decoding="async"></button>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>06</b>사진 추가 예정</div></div>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>07</b>사진 추가 예정</div></div>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>08</b>사진 추가 예정</div></div>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>09</b>사진 추가 예정</div></div>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>10</b>사진 추가 예정</div></div>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>11</b>사진 추가 예정</div></div>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>12</b>사진 추가 예정</div></div>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>13</b>사진 추가 예정</div></div>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>14</b>사진 추가 예정</div></div>
-        <div class="slide placeholder" aria-label="사진 추가 예정"><div><b>15</b>사진 추가 예정</div></div>
+      <div class="grid" id="grid" aria-label="웨딩 갤러리">
+        <button class="cell" type="button" data-i="0" aria-label="웨딩 사진 1"><img src="assets/gallery-01.jpg" alt="웨딩 사진 1" decoding="async"></button>
+        <button class="cell" type="button" data-i="1" aria-label="웨딩 사진 2"><img src="assets/gallery-02.jpg" alt="웨딩 사진 2" decoding="async"></button>
+        <button class="cell" type="button" data-i="2" aria-label="웨딩 사진 3"><img src="assets/gallery-03.jpg" alt="웨딩 사진 3" decoding="async"></button>
+        <button class="cell" type="button" data-i="3" aria-label="웨딩 사진 4"><img src="assets/gallery-04.jpg" alt="웨딩 사진 4" decoding="async"></button>
+        <button class="cell" type="button" data-i="4" aria-label="웨딩 사진 5"><img src="assets/gallery-05.jpg" alt="웨딩 사진 5" decoding="async"></button>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>06</b>추가 예정</div></div>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>07</b>추가 예정</div></div>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>08</b>추가 예정</div></div>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>09</b>추가 예정</div></div>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>10</b>추가 예정</div></div>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>11</b>추가 예정</div></div>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>12</b>추가 예정</div></div>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>13</b>추가 예정</div></div>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>14</b>추가 예정</div></div>
+        <div class="cell placeholder" aria-label="사진 추가 예정"><div><b>15</b>추가 예정</div></div>
       </div>
-      <p class="pager" id="pager" aria-live="polite">1 / 15</p>
-      <div class="thumbs" id="thumbs" aria-label="갤러리 썸네일"></div>
     </section>
 
     <!-- LOCATION -->
@@ -332,7 +329,7 @@
           <a href="tel:0221552222">02-2155-2222</a>
         </div>
       </div>
-      <button class="pill rv" id="map-open" type="button">
+      <button class="pill rv map-open" type="button">
         <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M20.5 3h-17A1.5 1.5 0 002 4.5v15A1.5 1.5 0 003.5 21h17a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0020.5 3zM8 19H4v-6h4v6zm6 0h-4V9h4v10zm6 0h-4V5h4v14z"/></svg>
         약도 이미지 보기
       </button>
@@ -371,26 +368,14 @@
         </div>
 
         <div class="transport-block">
-          <h3>[버스]</h3>
-          <div class="route">
-            <p class="route-title">하이브랜드 정류장 하차 (22384)</p>
-            <p class="sub">마을버스 서초08 · 서초20</p>
-          </div>
-          <div class="route">
-            <p class="route-title">양곡도매시장 정류장 하차 (22299)</p>
-            <p class="sub">간선 441 · 지선 8442 · 광역 9100 · 9200 · 9201 · 9300<br>일반 6 · 11-3 · 직행 1006 · 3000 · 3003 · 3030 · 3100 · 3101 · 6501 · G9633</p>
-          </div>
-        </div>
-
-        <div class="transport-block">
           <h3>[자가용]</h3>
-          <div class="route">
+          <button class="route route-btn map-open" type="button" aria-label="약도 크게 보기">
             <ul>
-              <li>양재 IC 인근 · 내비게이션 <b>'라시따시어터'</b> 또는 <b>'하이브랜드'</b></li>
-              <li>주소 검색 <b>'매헌로 16'</b> 또는 <b>'양재동 215'</b></li>
+              <li>주소 검색 <b>&lsquo;매헌로 16&rsquo;</b> 또는 <b>&lsquo;양재동 215&rsquo;</b></li>
               <li>하이브랜드 주차장 이용 (동시 1,700대 주차 가능)</li>
             </ul>
-          </div>
+            <span class="zoom-hint"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zm2.5-4h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>누르면 약도가 확대됩니다</span>
+          </button>
         </div>
       </div>
     </section>
@@ -405,8 +390,8 @@
 
     <!-- CLOSING -->
     <figure class="closing rv">
-      <span class="closing-frame">
-        <img src="assets/closing.jpg" alt="웨딩 케이크와 반지" width="1000" height="1333" loading="lazy" decoding="async">
+      <span class="closing-frame closing-ph" data-slot="closing">
+        <span><i aria-hidden="true">✦</i>마지막 사진 추가 예정</span>
       </span>
     </figure>
     <footer class="footer">
@@ -422,7 +407,7 @@
   <!-- MAP MODAL -->
   <div class="modal" id="map-modal" aria-hidden="true" role="dialog" aria-label="라시따시어터 약도">
     <button class="modal-close" id="map-close" type="button" aria-label="닫기">&times;</button>
-    <img class="modal-img" src="assets/map.png" alt="라시따시어터 약도" loading="lazy">
+    <div class="zoom-wrap" id="zoom-wrap"><img class="modal-img" id="map-img" src="assets/map.png" alt="라시따시어터 약도" loading="lazy"></div>
   </div>
 
   <!-- GALLERY MODAL -->
@@ -495,7 +480,6 @@
       copyText(url, '링크가 복사되었습니다.');
     });
     $('#top-btn').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    $('#scroll-hint').addEventListener('click', () => { const t = $('.message'); window.scrollTo({ top: t.offsetTop - 10, behavior: 'smooth' }); });
 
     /* modals */
     function bindModal(modal, closeBtn) {
@@ -507,34 +491,17 @@
       return { open, close };
     }
     const mapM = bindModal($('#map-modal'), $('#map-close'));
-    $('#map-open').addEventListener('click', mapM.open);
+    const zoomWrap = $('#zoom-wrap');
+    $('#map-img').addEventListener('click', e => {
+      const on = zoomWrap.classList.toggle('zoomed');
+      if (on) { const r = zoomWrap.getBoundingClientRect(); const rx = (e.clientX - r.left) / r.width, ry = (e.clientY - r.top) / r.height;
+        requestAnimationFrame(() => { zoomWrap.scrollLeft = zoomWrap.scrollWidth * rx - r.width / 2; zoomWrap.scrollTop = zoomWrap.scrollHeight * ry - r.height / 2; }); }
+    });
+    $('#map-close').addEventListener('click', () => zoomWrap.classList.remove('zoomed'));
+    $$('.map-open').forEach(b => b.addEventListener('click', mapM.open));
 
     /* gallery */
-    const track = $('#track'); const slides = $$('.slide', track); const photos = slides.filter(s => !s.classList.contains('placeholder'));
-    const pager = $('#pager'); const thumbs = $('#thumbs');
-    slides.forEach((s, i) => {
-      const t = document.createElement('button'); t.type = 'button'; t.className = 'thumb' + (s.classList.contains('placeholder') ? ' ph' : ''); t.setAttribute('aria-label', '사진 ' + (i + 1) + ' 보기');
-      const img = s.querySelector('img'); if (img) { const im = document.createElement('img'); im.src = img.src; im.alt = ''; im.loading = 'lazy'; t.appendChild(im); } else t.textContent = String(i + 1).padStart(2, '0');
-      t.addEventListener('click', () => s.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' }));
-      thumbs.appendChild(t);
-    });
-    const thumbEls = $$('.thumb', thumbs);
-    function currentIndex() {
-      const c = track.scrollLeft + track.clientWidth / 2; let best = 0, bd = Infinity;
-      slides.forEach((s, i) => { const d = Math.abs(s.offsetLeft + s.offsetWidth / 2 - c); if (d < bd) { bd = d; best = i; } });
-      return best;
-    }
-    let raf;
-    function syncPager() {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const i = currentIndex(); pager.textContent = (i + 1) + ' / ' + slides.length;
-        thumbEls.forEach((t, k) => t.classList.toggle('is-active', k === i));
-        const a = thumbEls[i]; if (a) a.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-      });
-    }
-    track.addEventListener('scroll', syncPager, { passive: true }); syncPager();
-
+    const photos = $$('#grid .cell:not(.placeholder)');
     const galM = bindModal($('#gal-modal'), $('#gal-close')); const galImg = $('#gal-img'); const galCount = $('#gal-count'); let gi = 0;
     function showPhoto(i) { gi = (i + photos.length) % photos.length; const im = photos[gi].querySelector('img'); galImg.src = im.src; galImg.alt = im.alt; galCount.textContent = (gi + 1) + ' / ' + photos.length; }
     photos.forEach((p, i) => p.addEventListener('click', () => { showPhoto(i); galM.open(); }));
