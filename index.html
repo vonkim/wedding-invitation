@@ -35,7 +35,9 @@
   <meta name="twitter:image" content="https://vonkim.github.io/wedding-invitation/assets/og.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Great+Vibes&family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Great+Vibes&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
   <style>
     :root {
       --bg: #ffffff;
@@ -48,9 +50,9 @@
       --accent: #b9a77f;        /* soft champagne gold */
       --accent-soft: #f3eee4;
       --red-line: #d4003b;      /* 신분당선 */
-      --sans: "Noto Sans KR", "Outfit", -apple-system, sans-serif;
-      --serif: "Cormorant Garamond", "Noto Serif KR", Georgia, serif;
-      --serif-kr: "Noto Serif KR", "Cormorant Garamond", Georgia, serif;
+      --sans: "Pretendard Variable", Pretendard, "Outfit", -apple-system, "Apple SD Gothic Neo", sans-serif;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --serif-kr: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", sans-serif;
       --script: "Great Vibes", "Cormorant Garamond", cursive;
       --slide: min(76vw, 360px);
     }
@@ -100,8 +102,8 @@
     .hero-photo { position: relative; width: 100%; max-width: 520px; margin: 1.6rem auto 1.5rem; overflow: hidden; border-radius: 2px; aspect-ratio: 2 / 3; background: var(--accent-soft); }
     .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .hero-photo::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.35); pointer-events: none; }
-    .hero-names { font-family: var(--serif-kr); font-weight: 300; font-size: clamp(1.45rem, 5.6vw, 1.75rem); letter-spacing: .32em; color: var(--ink); padding-left: .32em; }
-    .hero-names .amp { font-family: var(--script); font-size: 1.15em; letter-spacing: 0; color: var(--accent); margin: 0 .1em; }
+    .hero-names { font-family: var(--sans); font-weight: 300; font-size: clamp(1.5rem, 5.8vw, 1.8rem); letter-spacing: .28em; color: var(--ink); padding-left: .28em; }
+    .hero-names .amp { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 1.05em; letter-spacing: 0; color: var(--accent); margin: 0 .15em; }
     .hero-date { margin-top: 1.1rem; font-family: var(--serif); font-size: clamp(1.5rem, 6vw, 1.8rem); letter-spacing: .14em; font-weight: 400; color: var(--ink); }
     .hero-when { margin-top: .25rem; font-size: .92rem; letter-spacing: .08em; color: var(--body); font-weight: 400; }
     .hero-place { margin-top: .15rem; font-size: .88rem; letter-spacing: .04em; color: var(--muted); }
@@ -347,7 +349,7 @@
             <a href="https://www.tmap.co.kr/tmap2/mobile/route.jsp?name=%EB%9D%BC%EC%8B%9C%EB%94%B0%EC%8B%9C%EC%96%B4%ED%84%B0&lon=127.0369&lat=37.4624" target="_blank" rel="noopener noreferrer">티맵</a>
             <a href="https://map.kakao.com/link/to/%EB%9D%BC%EC%8B%9C%EB%94%B0%EC%8B%9C%EC%96%B4%ED%84%B0,37.4624,127.0369" target="_blank" rel="noopener noreferrer">카카오내비</a>
           </div>
-          <p class="parking-note"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13 3H6v18h4v-6h3a6 6 0 0 0 0-12zm.2 8H10V7h3.2a2 2 0 0 1 0 4z"/></svg>주차 공간이 넉넉하며, <b>3시간 무료 주차</b>가 가능합니다.</p>
+          <p class="parking-note"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M13 3H6v18h4v-6h3a6 6 0 0 0 0-12zm.2 8H10V7h3.2a2 2 0 0 1 0 4z"/></svg><span>주차 공간이 넉넉하며, <b>3시간 무료 주차</b>가 가능합니다.</span></p>
         </div>
 
         <button class="map-inline map-open" type="button" aria-label="약도 크게 보기">
