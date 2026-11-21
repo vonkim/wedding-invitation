@@ -36,8 +36,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Great+Vibes&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
   <style>
     :root {
       --bg: #ffffff;
@@ -50,10 +50,10 @@
       --accent: #b9a77f;        /* soft champagne gold */
       --accent-soft: #f3eee4;
       --red-line: #d4003b;      /* 신분당선 */
-      --sans: "Pretendard Variable", Pretendard, "Outfit", -apple-system, "Apple SD Gothic Neo", sans-serif;
-      --serif: "Cormorant Garamond", Georgia, serif;
-      --serif-kr: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", sans-serif;
-      --script: "Great Vibes", "Cormorant Garamond", cursive;
+      --sans: "SUIT Variable", "Apple SD Gothic Neo", -apple-system, "Noto Sans KR", sans-serif;
+      --serif: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+      --serif-kr: "SUIT Variable", "Apple SD Gothic Neo", -apple-system, "Noto Sans KR", sans-serif;
+      --script: "Cormorant Garamond", "Times New Roman", Georgia, serif;
       --slide: min(76vw, 360px);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -91,19 +91,19 @@
     /* ───────── layout ───────── */
     .main { max-width: 600px; margin: 0 auto; background: var(--bg); box-shadow: 0 0 40px rgba(0,0,0,0.04); }
     section { padding-left: 1.1rem; padding-right: 1.1rem; }
-    .badge { margin-bottom: .45rem; font-family: "Outfit", var(--sans); font-size: .7rem; letter-spacing: .3em; color: var(--accent); text-align: center; }
-    .sec-title { font-family: var(--serif-kr); font-weight: 400; font-size: 1.45rem; letter-spacing: .06em; color: var(--ink); text-align: center; margin-bottom: .9rem; }
+    .badge { margin-bottom: .3rem; font-family: var(--serif); font-weight: 400; font-size: clamp(1.45rem, 5.5vw, 1.7rem); letter-spacing: .24em; padding-left: .24em; text-transform: uppercase; line-height: 1.2; color: var(--ink); text-align: center; }
+    .sec-title { font-family: var(--sans); font-weight: 400; font-size: .9rem; letter-spacing: .14em; padding-left: .14em; color: var(--muted); text-align: center; margin-bottom: 1rem; }
     .divider { width: 32px; height: 1px; background: var(--accent); margin: 0 auto; opacity: .7; }
 
     /* ───────── hero ───────── */
     .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 3rem; padding-bottom: 3rem; text-align: center; background: var(--bg); }
-    .hero-kicker { font-family: var(--script); font-size: clamp(2.3rem, 9vw, 3rem); line-height: 1; color: var(--ink); font-weight: 400; }
-    .hero-kicker small { display: block; margin-top: .35rem; font-family: "Outfit", var(--sans); font-weight: 300; font-size: clamp(.78rem, 3vw, .9rem); letter-spacing: .46em; text-transform: uppercase; color: var(--muted); padding-left: .46em; }
+    .hero-kicker { font-family: var(--serif); font-size: clamp(1.6rem, 6.5vw, 2rem); line-height: 1.1; color: var(--ink); font-weight: 400; letter-spacing: .3em; padding-left: .3em; text-transform: uppercase; }
+    .hero-kicker small { display: block; margin-top: .55rem; font-family: var(--sans); font-weight: 300; font-size: clamp(.7rem, 2.8vw, .8rem); letter-spacing: .42em; text-transform: uppercase; color: var(--muted); padding-left: .42em; }
     .hero-photo { position: relative; width: 100%; max-width: 520px; margin: 1.6rem auto 1.5rem; overflow: hidden; border-radius: 2px; aspect-ratio: 2 / 3; background: var(--accent-soft); }
     .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .hero-photo::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.35); pointer-events: none; }
-    .hero-names { font-family: var(--sans); font-weight: 300; font-size: clamp(1.5rem, 5.8vw, 1.8rem); letter-spacing: .28em; color: var(--ink); padding-left: .28em; }
-    .hero-names .amp { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 1.05em; letter-spacing: 0; color: var(--accent); margin: 0 .15em; }
+    .hero-names { font-family: var(--sans); font-weight: 300; font-size: clamp(1.5rem, 5.8vw, 1.8rem); letter-spacing: .32em; color: var(--ink); padding-left: .32em; }
+    .hero-names .amp { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 1.1em; letter-spacing: 0; color: var(--muted); margin: 0 .1em; }
     .hero-date { margin-top: 1.1rem; font-family: var(--serif); font-size: clamp(1.5rem, 6vw, 1.8rem); letter-spacing: .14em; font-weight: 400; color: var(--ink); }
     .hero-when { margin-top: .25rem; font-size: .92rem; letter-spacing: .08em; color: var(--body); font-weight: 400; }
     .hero-place { margin-top: .15rem; font-size: .88rem; letter-spacing: .04em; color: var(--muted); }
@@ -122,7 +122,7 @@
     .celebrate-box span { display: block; font-size: 1.3rem; color: var(--accent); opacity: .8; }
     .celebrate-title { font-family: var(--serif); font-weight: 400; color: var(--ink); line-height: 1; }
     .celebrate-title span { display: block; font-size: clamp(1.7rem, 7.5vw, 2.3rem); letter-spacing: .22em; padding-left: .22em; }
-    .celebrate-title em { display: block; margin-top: .2rem; font-family: var(--script); font-style: normal; font-size: clamp(2.2rem, 9vw, 2.9rem); color: var(--accent); }
+    .celebrate-title em { display: block; margin-top: .25rem; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(1.9rem, 8vw, 2.5rem); letter-spacing: .06em; color: var(--muted); }
 
     /* ───────── people ───────── */
     .people { display: grid; gap: 2.4rem; padding-top: 1.4rem; padding-bottom: 3rem; background: var(--bg); }
@@ -137,7 +137,7 @@
 
     /* ───────── gallery ───────── */
     .gallery { padding-left: 0; padding-right: 0; padding-top: 1.6rem; padding-bottom: 3rem; background: var(--bg); }
-    .gallery .sec-title { font-family: var(--serif); font-size: 1.6rem; letter-spacing: .12em; margin-bottom: 1.2rem; }
+    .gallery .sec-title { font-family: var(--serif); font-weight: 400; font-size: clamp(1.45rem, 5.5vw, 1.7rem); letter-spacing: .24em; padding-left: .24em; text-transform: uppercase; color: var(--ink); margin-bottom: 1.2rem; }
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .35rem; padding: 0 .6rem; }
     .cell { aspect-ratio: 3 / 4; border: 0; padding: 0; overflow: hidden; background: var(--paper); cursor: pointer; border-radius: 2px; position: relative; }
     .cell img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; transition: transform .5s ease; }
@@ -158,7 +158,7 @@
     .transport { max-width: 440px; margin: 2.2rem auto 0; text-align: left; font-size: .87rem; line-height: 1.8; color: var(--body); }
     .transport-block + .transport-block { margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line-soft); }
     .transport h3 { font-size: .92rem; font-weight: 600; letter-spacing: .04em; color: var(--ink); margin-bottom: .35rem; }
-    .transport h3 .en { font-family: "Outfit", var(--sans); font-weight: 400; font-size: .72rem; letter-spacing: .2em; color: var(--accent); margin-left: .45rem; }
+    .transport h3 .en { font-family: var(--sans); font-weight: 400; font-size: .72rem; letter-spacing: .2em; color: var(--accent); margin-left: .45rem; }
     .nav-apps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .45rem; margin-top: .75rem; }
     .nav-apps a { display: flex; align-items: center; justify-content: center; min-height: 2.5rem; border: 1px solid rgba(43,42,40,.22); border-radius: 999px; background: #fff; color: var(--ink); font-size: .78rem; text-decoration: none; }
     .route { margin-top: .7rem; }
@@ -245,7 +245,7 @@
   <main class="main">
     <!-- HERO -->
     <section class="hero" id="invitation">
-      <h1 class="hero-kicker">Happy<small>Wedding Day</small></h1>
+      <h1 class="hero-kicker">Wedding Day<small>Von &amp; Minseong</small></h1>
       <div class="hero-photo">
         <img src="assets/hero.jpg" alt="본과 민성의 웨딩 사진" width="1200" height="1800" decoding="async" fetchpriority="high">
       </div>
